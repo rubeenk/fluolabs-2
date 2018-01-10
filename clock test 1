@@ -1,0 +1,14 @@
+def setup():
+    size(400, 400)
+    
+def draw():
+    background(random(255), random(255), random(255))
+
+    stroke(255)
+    textSize(32)
+    
+    h = hour() - 12
+    m = minute()
+    s = second() 
+
+    text(str(h) + ":" + str(m) + ":" + str(s), 120 + (random(200 - -200)), 260 + (random(200 - -200)))

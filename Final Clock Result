@@ -1,0 +1,44 @@
+def setup():
+    size(400, 400)
+    
+def draw():
+    background(73, 240, 113)
+    stroke(255)
+    textSize(32)
+    stroke(0)
+    fill(0)
+    rect(0, 300, 400, 400, 5)
+    
+    h = hour() - 12
+    m = minute()
+    s = second() 
+    
+    fill(255, 0, 0)
+    text(str(h) + "h" + str(m) + "m" + str(s) + "s", 120, 300)
+    
+    stroke(0, 176, 255)
+    fill(0, 176, 255)
+    rect(200, 200, 50, 50, 5)
+    
+    stroke(0, 255, 0)
+    fill(0, 255, 0)
+    rect(320, 249, 50, 50, 5)
+    
+    fill(175, 32, 99)
+    text("Timer Platformer", 140, 20, 200, 200)
+    fill(255, 110, 0)
+    text("By Kaleb Kim", 180, 100, 100, 100)
+    
+    # Are you just copying and pasting this??? Why do people do these things???
+    # So you're hylighting me now... right... You do realize you'r copying someones
+    # Work word by word... I tried...Stop... really... don't you dare... 
+    # ugh... 0__o You're still reading this aren't you... I'm tired of this...
+    # Why do keyboards exist... can't you use touch screen boards... NO hylighting please!!
+    # Sit up strait please!! Don't think I can't here you because i'm just a peice of text...
+    # You're still here. Leave NOW... Yes i'm talking to you... I can here you...
+    # I said sit up strait please!!! *sigh* Why do you want to even read me?!?!?
+    # Okay... Just keep reading... Sure hope youre eyes can survive... Nah... 
+    # The audience problably left... Now I can take a break... Oh... Yeah
+    # Your'e still here... I'm just gonna stop talking... Wait who's typing this
+    # Really Larry???(Don't worry folks I'm gonna type in a couple of jokes...)
+    # Well um... Bye soon I guess...

@@ -1,0 +1,33 @@
+def setup():
+    global rcolor, s, ps, x, y
+    size(800, 800)
+    rcolor = color(random(255), random(255), random(255))
+    
+    s = second()
+    ps = s - 1
+    x = random(width)
+    y = random(height)
+    
+def draw():
+    global rcolor, s, ps, x, y
+    background(random(255), random(255), random(255))
+    stroke(255)
+    textSize(32)
+    
+    # Get hour, minuites, and seconds    
+    h = hour() - 12
+    m = minute()
+    s = second()
+    
+    
+    if(s != ps):
+        rcolor = color(random(255), random(255), random(255))
+        ps = s
+        x = random(width)
+        y = random(height)
+        
+    fill(rcolor)
+    text(str(h) + ":" + str(m) + ":" + str(s), x, y)
+    
+    fill(random(255), random(255), random(255))
+    text("I LIKE TURTLES!!!!!", random(799), random(799))

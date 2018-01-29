@@ -1,0 +1,16 @@
+def setup():
+  size(640, 360, P3D)
+
+def draw():
+  background(130, 50, 255)
+  camera(mouseX, height/2, (height/2) / tan(PI/6), mouseX, height/2, 0, 0, 1, 0)
+  translate(width/2, height/2, -100)
+  stroke(130, 50, 255)
+  lights()
+  fill(140)
+  box(200)
+  spotLight(255, 0, 0, width/2, height/2, 400, 0, 0, -1, PI/4, 2)
+  if(mousePressed):
+    camera(mouseX, height/4, (height/4) / tan(PI/12), mouseX, height/2, 0, 0, 1, 0)
+  else:
+    camera(mouseX, height/2, (height/2) / tan(PI/6), mouseX, height/2, 0, 0, 1, 0)

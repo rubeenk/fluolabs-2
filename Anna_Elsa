@@ -1,0 +1,30 @@
+import fluo 
+
+def setup():
+    size(400, 400)
+    global angle
+    angle = 0
+    
+def draw():
+    global angle
+    
+    background(random(255), random(255), random(255))
+    
+    stroke(random(255), random(255), random(255))
+    
+    #line(width/3, height/2, width*2/3, height/2)
+    translate(width/2, height/2)
+    
+    strokeWeight(3)
+    rotate(radians(angle))
+    #fluo.showGrid()
+    
+    makeCross(0, 0)
+    
+    angle = angle - 1000000000000000000000000000
+def makeCross(x, y, dir=RIGHT):    
+        line(x, y, x, y - 100)    
+        line(x, y, x + 100, y)    
+        line(x, y, x, y + 100)
+        line(x, y, x - 100, y)
+

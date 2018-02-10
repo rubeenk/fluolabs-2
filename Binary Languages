@@ -1,0 +1,22 @@
+def setup():
+    global ch
+    size(800, 800)
+    msfont = loadFont("data/MS-Gothic-48.vlw")
+    textFont(msfont, 240)
+    
+    ch = 0x30A0 + random(96)
+    
+    print('a')
+    print(ord('a'))
+    
+def draw():     
+    background(0)
+    fill(0, random(255 - 0), random(70 - 0))
+    ch = 0x30A0 + random(96)
+    text(unichr(ch), width/2, height/2)
+    
+def keyPressed():
+    global ch   
+    ch = 0x30A0 + random(96)
+ 
+    

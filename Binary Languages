@@ -18,5 +18,6 @@ def draw():
 def keyPressed():
     global ch   
     ch = 0x30A0 + random(96)
- 
+  
+  # Gothic-Kanakawa???
     

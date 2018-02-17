@@ -1,0 +1,28 @@
+symbolSize = 60
+
+def setup():
+    global ch
+    size(800, 800)
+    
+    msfont = loadFont("data/MS-Gothic-48.vlw")
+    textFont(msfont, symbolSize)
+    ch = unichr(0x30A0 + int(random(96)))
+    background(0)
+    
+def draw():
+    fill(0, 255, 70)
+    ch = unichr(0x30A0 + int(random(96)))    
+    text(ch, random(800), random(800))
+        
+    if (mousePressed):
+        fill(0)
+        ellipse(mouseX, mouseY, 180, 180)
+        
+    
+    
+def keyPressed():
+    print(key)
+    if (key == ' '):
+        background(0)  
+    global ch
+    ch = unichr(0x30A0 + int(random(96)))

@@ -1,0 +1,33 @@
+symbolSize = 100
+
+symbols_y = []
+symbols_x = []
+
+NUM = 15
+def setup():
+    global ch, x, y
+    size(800, 800)
+    
+    msfont = loadFont("data/MS-Gothic-48.vlw")
+    textFont(msfont, symbolSize)
+    ch = unichr(0x30A0 + int(random(96)))
+
+    for i in range(NUM):
+        symbols_x.append(100*i)
+    
+    for i in range(NUM):
+        symbols_y.append(random(-100, 0))
+        
+    
+    
+def draw():
+    global ch, x, y
+    background(0)
+    fill(0, 255, 70)
+    
+    for i in range(NUM):
+        ch = unichr(0x30A0 + int(random(96)))
+        print(symbols_y[i])
+        text(ch, symbols_x[i], symbols_y[i])        
+        symbols_y[i] = symbols_y[i] + 1
+    
